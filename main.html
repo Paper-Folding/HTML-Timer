@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Demo</title>
+    <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asset/bootstrap-icon/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="row text-center">
+            <div class="btn-group justify-content-center col-12" id="inputer">
+                <div class="form-floating me-3">
+                    <select class="form-select" id="mode">
+                        <option value="0" selected>Timer Duration</option>
+                        <option value="1">Timer Until</option>
+                    </select>
+                    <label for="mode">Choose Mode</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text"
+                        style="border-top-right-radius: 0;border-bottom-right-radius: 0;border-right: unset;"
+                        class="form-control" id="hour" placeholder="Hour" tabindex="1" />
+                    <label for="hour">Hour</label>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-outline-primary py-0 px-2" tabindex="-1" onclick="addByOne('hour')"
+                        style="border-radius: 0;border-bottom: unset;">
+                        <i class="bi-plus-lg"></i></button>
+                    <button class="btn btn-outline-primary py-0 px-2" tabindex="-1" onclick="reduceByOne('hour')"
+                        style="border-radius: 0;">
+                        <i class="bi-dash-lg"></i></button>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Minute" tabindex="1"
+                        style="border-radius: 0;border-left: unset;border-right: unset;" id="minute" />
+                    <label for="minute">Minute</label>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-outline-primary py-0 px-2" tabindex="-1" onclick="addByOne('minute')"
+                        style="border-radius: 0;border-bottom: unset;">
+                        <i class="bi-plus-lg"></i></button>
+                    <button class="btn btn-outline-primary py-0 px-2" tabindex="-1" onclick="reduceByOne('minute')"
+                        style="border-radius: 0;">
+                        <i class="bi-dash-lg"></i></button>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control"
+                        style="border-radius: 0;border-left: unset;border-right: unset;" tabindex="2" placeholder="00"
+                        id="second" />
+                    <label for="second">Second</label>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-outline-primary py-0 px-2" tabindex="-1" onclick="addByOne('second')"
+                        style="border-top-left-radius: 0;border-bottom-left-radius: 0;border-bottom-right-radius: 0;border-bottom: unset;">
+                        <i class="bi-plus-lg"></i></button>
+                    <button class="btn btn-outline-primary py-0 px-2 btn-minus" tabindex="-1"
+                        onclick="reduceByOne('second')"
+                        style="border-top-left-radius: 0;border-bottom-left-radius: 0;border-top-right-radius: 0;">
+                        <i class="bi-dash-lg"></i></button>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+                <p class="display-1" id='timer'></p>
+            </div>
+            <div class="col-12 mt-3" id='function-btns'>
+                <button class="btn btn-outline-success round-btn" id="btn-start">start</button>
+                <button class="btn btn-outline-success round-btn" id="btn-resume">resume</button>
+                <button class="btn btn-outline-warning round-btn" id="btn-pause">pause</button>
+                <button class="btn btn-outline-danger round-btn" id="btn-stop">stop</button>
+            </div>
+        </div>
+    </div>
+    <script src="asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+
+</html>

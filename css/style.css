@@ -1,0 +1,24 @@
+*,body,html {
+    font-family: 'Consolas';
+    transition: all ease-in-out 0.5s;
+}
+
+input[type=text] {
+    text-align: center;
+    font-size: 2em;
+    width: 3em;
+}
+
+.form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+    opacity: .65;
+    transform: scale(.85) translateY(-0.7rem) translateX(.15rem);
+}
+
+.round-btn {
+    width: 3.5em;
+    height: 3.5em;
+    /* border: 2px #fff solid; */
+    border-radius: 50%;
+    padding: unset;
+    font-size: 2em;
+}
