@@ -2,12 +2,12 @@
     font-family: 'Consolas';
 }
 
-body #function-btns>button {
+body #function-btns {
     display: none;
     opacity: 0;
 }
 
-body:hover #function-btns>button {
+body:hover #function-btns {
     display: initial;
     opacity: 1;
 }
