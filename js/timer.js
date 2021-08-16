@@ -14,7 +14,12 @@ let Timer = {
             currentLeftSeconds: +$('#hour').val() * 3600 + +$('#minute').val() * 60 + +$('#second').val(),
         };
         if (this.mode !== 0) {
-            let now = new Date(), nowh = now.getHours(), nowm = now.getMinutes(), nows = now.getSeconds(), nowt = nowh * 3600 + nowm * 60 + nows;
+            let now = new Date(), adjust = now.getMilliseconds();
+            while (adjust % 1000 !== 0) { // this while to adjust time to a perfectly accurate time point that synchronize with current time perfectly
+                now = new Date();
+                adjust = now.getMilliseconds();
+            }
+            let nowh = now.getHours(), nowm = now.getMinutes(), nows = now.getSeconds(), nowt = nowh * 3600 + nowm * 60 + nows;
             this.counter.currentLeftSeconds = this.counter.totalSeconds = (this.counter.totalSeconds - nowt + 24 * 3600) % (24 * 3600);
             this.reduce(0);
         }
