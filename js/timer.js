@@ -314,8 +314,4 @@ function inputLeft(target) {
     let val = target.val();
     target.val(val.padStart(2, '0'));
 }
-
-$('body').dblclick(function () {
-    document.getElementById('function-btns').classList.toggle('d-none');
-})
 //#endregion
