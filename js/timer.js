@@ -84,9 +84,11 @@ let Timer = {
     },
     resume: function () { // ↪
         let target = $('#timer');
+        this.startSecond = Math.floor(new Date().getTime() / 1000);
+        this.counter.totalSeconds = this.counter.currentLeftSeconds;
+        this.reduce(0);
         this.timer = setInterval((function (_this) {
             return function () {
-                this.startSecond = Math.floor(new Date().getTime() / 1000);
                 _this.calibrate();
                 target.html(_this.output());
             }
