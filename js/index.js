@@ -171,6 +171,7 @@ $(document).ready(function () {
     $('#btn-resume').hide();
     $('#btn-pause').hide();
     $('#btn-stop').hide().text('return');
+    document.documentElement.dataset.bsTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';  // dark or light bootstrap theme
 })
 
 function inputLeft(target) {

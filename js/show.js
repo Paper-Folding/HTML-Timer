@@ -9,4 +9,5 @@ $(document).ready(function () {
         Timer.mode = +timerInfo.mode;
         Timer.start();
     }
+    document.documentElement.dataset.bsTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';  // dark or light bootstrap theme
 })

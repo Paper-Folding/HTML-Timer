@@ -1,5 +1,17 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-bg: #fff;
+        --color-ft: #000;
+    }
+}
+
 * {
-    font-family: 'Consolas';
+    font-family: "Consolas";
+}
+
+body {
+    background-color: var(--color-bg, #000);
+    color: var(--color-ft, #fff);
 }
 
 body #function-btns {
@@ -12,15 +24,17 @@ body:hover #function-btns {
     opacity: 1;
 }
 
-input[type=text] {
+input[type="text"] {
     text-align: center;
     font-size: 2em;
     width: 3em;
 }
 
-.form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
-    opacity: .65;
-    transform: scale(.85) translateY(-0.7rem) translateX(.15rem);
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.7rem) translateX(0.15rem);
 }
 
 .round-btn {
